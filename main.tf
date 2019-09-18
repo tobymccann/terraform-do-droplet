@@ -4,6 +4,7 @@ resource "digitalocean_droplet" "do_droplet" {
   name               = var.do_droplet_name
   region             = var.do_region
   size               = var.do_droplet_size.5usd
+  
   ssh_keys           = [var.ssh_id]
   private_networking = true
   backups            = true
