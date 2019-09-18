@@ -6,10 +6,6 @@ output "do_droplet_private_ip" {
   value = digitalocean_droplet.do_droplet.ipv4_address_private
 }
 
-output "do_droplet_name" {
-  value = digitalocean_droplet.do_droplet.name
-}
-
 output "do_droplet_id" {
   value = digitalocean_droplet.ado_droplet.id
 }

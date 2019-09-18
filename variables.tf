@@ -2,6 +2,7 @@ variable "pvt_key" {}
 variable "ssh_id" {}
 variable "ssh_user" {}
 
+variable "do_droplet_name" {}
 variable "domain_name" {}
 variable "project" {}
 variable "customer_id" {}
