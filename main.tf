@@ -1,4 +1,4 @@
-esource "digitalocean_droplet" "do_droplet" {
+resource "digitalocean_droplet" "do_droplet" {
   count              = var.do_nodes
   image              = data.digitalocean_image.ubuntu.image
   name               = var.do_droplet_name
