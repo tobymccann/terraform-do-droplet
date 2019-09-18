@@ -2,9 +2,8 @@ resource "digitalocean_droplet" "do_droplet" {
   count              = var.do_nodes
   image              = data.digitalocean_image.ubuntu.image
   name               = var.do_droplet_name
-  region             = var.do_region
-  size               = var.do_droplet_size.5usd
-  
+  region             = var.do_region 
+  size               = var.do_droplet_size.5usd 
   ssh_keys           = [var.ssh_id]
   private_networking = true
   backups            = true
