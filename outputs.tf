@@ -7,7 +7,7 @@ output "do_droplet_private_ip" {
 }
 
 output "do_droplet_id" {
-  value = digitalocean_droplet.ado_droplet.id
+  value = digitalocean_droplet.do_droplet.id
 }
 
 output "do_droplet_urn" {
