@@ -11,6 +11,11 @@ variable "do_tag_role" {}
 variable "do_region" {}
 variable "do_nodes" {}
 
+variable "do_record_ttl" {
+  description = "DNS A Record TTL"
+  type        = "number"
+}
+
 variable "do_droplet_size" {
   description = "Droplet size"
   type = "string"

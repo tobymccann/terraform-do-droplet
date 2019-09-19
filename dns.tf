@@ -4,4 +4,5 @@ resource "digitalocean_record" "do-droplet-dns-a" {
   type   = "A"
   name   = "${element(digitalocean_droplet.do_droplet.*.name, count.index)}"
   value  = "${element(digitalocean_droplet.do_droplet.*.ipv4_address, count.index)}"
+  ttl    = var.do_record_ttl
 }
