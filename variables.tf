@@ -14,11 +14,6 @@ variable "do_nodes" {}
 variable "do_droplet_size" {
   type = map(string)
   default = {
-    "small" = "512mb"
-    "5usd"  = "s-1vcpu-1gb"
-    "10usd" = "s-1vcpu-2gb"
-    "15usd" = "s-2vcpu-2gb"
-    "20usd" = "s-2vcpu-4gb"
   }
 }
 
