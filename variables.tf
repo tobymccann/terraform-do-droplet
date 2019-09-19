@@ -12,9 +12,10 @@ variable "do_region" {}
 variable "do_nodes" {}
 
 variable "do_droplet_size" {
+  description = "Map of Droplet sizes"
   type = map(string)
-  default = {
-  }
+  type = "map"
+  default = {}
 }
 
 data "digitalocean_image" "ubuntu" {
