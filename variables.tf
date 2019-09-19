@@ -13,7 +13,7 @@ variable "do_nodes" {}
 
 variable "do_record_ttl" {
   description = "DNS A Record TTL"
-  type        = "number"
+  type        = number
 }
 
 variable "do_droplet_size" {
