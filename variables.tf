@@ -10,6 +10,8 @@ variable "do_tag_env" {}
 variable "do_tag_role" {}
 variable "do_region" {}
 variable "do_nodes" {}
+variable "do_admin_user" {}
+variable "do_admin_pub_key" {}
 
 variable "do_record_ttl" {
   description = "DNS A Record TTL"

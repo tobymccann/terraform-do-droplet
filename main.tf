@@ -25,6 +25,16 @@ resource "digitalocean_droplet" "do_droplet" {
       "export PATH=$PATH:/usr/bin",
       "sudo apt-get update",
       "sudo apt-get -y install mosh",
+      "sudo adduser --disabled-password --gecos '' ${var.do_admin_user}",
+      "sudo mkdir -p /home/${var.do_admin_user}/.ssh",
+      "sudo touch /home/${var.do_admin_user}/.ssh/authorized_keys",
+      "sudo echo '${var.do_admin_pub_key}' > authorized_keys",
+      "sudo mv authorized_keys /home/${var.do_admin_user}/.ssh",
+      "sudo chown -R ${var.do_admin_user}:${var.do_admin_user} /home/${var.do_admin_user}/.ssh",
+      "sudo chmod 700 /home/${var.do_admin_user}/.ssh",
+      "sudo chmod 600 /home/${var.do_admin_user}/.ssh/authorized_keys",
+      "sudo usermod -aG sudo ${var.do_admin_user}"
+   ]
     ]
   }
 }
