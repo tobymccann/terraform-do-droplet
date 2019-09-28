@@ -40,4 +40,5 @@ resource "digitalocean_droplet" "do_droplet" {
       "sudo chmod 600 /home/${var.do_admin_user}/.ssh/authorized_keys",
       "sudo usermod -aG sudo ${var.do_admin_user}"
    ]
+  }
 }
